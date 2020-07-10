@@ -96,7 +96,7 @@ try {
       },
     });
     vm.$mount();
-    let spy = chai.spy(function() {});
+    let spy = chai.spy(function () { });
 
     vm.$on("click", spy);
     // 希望这个函数被执行
@@ -107,7 +107,7 @@ try {
 } catch (error) {
   window.errors = [error];
 } finally {
-  window.errors.forEach((error) => {
+  window.errors && window.errors.forEach((error) => {
     console.error(error.message);
   });
 }
