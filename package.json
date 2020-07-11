@@ -1,8 +1,8 @@
 {
-  "name": "vue-wheels",
-  "version": "0.0.1",
+  "name": "wheel-test-1",
+  "version": "0.0.2",
   "description": "这一个vue ui框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
