@@ -2,7 +2,7 @@
 
 作者: JimmeyCheung
 
-[![Build Status](https://travis-ci.org/FrankFang/frank-test-1.svg?branch=master)](https://travis-ci.org/FrankFang/frank-test-1)
+[![Build Status](https://travis-ci.org/JimmeyCheung/vue-wheels.svg?branch=master)](https://travis-ci.org/JimmeyCheung/vue-wheels)
 
 ## 介绍
 
