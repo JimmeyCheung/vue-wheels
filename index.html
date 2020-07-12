@@ -36,16 +36,18 @@
 <body>
   <div id="app">
     <div class="box">
-      <g-input value="王" @change="inputChange"></g-input>
+      <g-input v-model="message"></g-input>
+      <p>{{message}}</p>
+      <button @click="message+=1">+1</button>
     </div>
     <div class="box">
       <g-button :loading="loading1" @click="loading1 = !loading1">
         按钮
       </g-button>
-      <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
+      <g-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
         按钮
       </g-button>
-      <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+      <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
         按钮
       </g-button>
       <g-button-group>
