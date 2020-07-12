@@ -2,8 +2,12 @@
   <div class="wrapper" :class="{error}">
     <input :value="value" type="text" :disabled="disabled" :readonly="readonly" />
     <template v-if="error">
-      <icon name="error" class="icon-info"></icon>
+      <icon name="error" class="icon-error"></icon>
       <span class="errorMessage">{{error}}</span>
+    </template>
+    <template v-if="info">
+      <icon name="info" class="icon-info"></icon>
+      <span class="infoMessage">{{info}}</span>
     </template>
   </div>
 </template>
@@ -25,6 +29,9 @@ export default {
       default: false
     },
     error: {
+      type: String
+    },
+    info: {
       type: String
     }
   }
