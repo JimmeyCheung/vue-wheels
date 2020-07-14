@@ -1,11 +1,10 @@
 <template>
-  <div class="content">
+  <div class="footer">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.content {
-  flex-grow: 1;
+.footer {
 }
 </style> 
