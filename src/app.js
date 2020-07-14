@@ -63,9 +63,7 @@ new Vue({
                     callback() {
                         console.log('他说已经充值智商了')
                     }
-                },
-                autoClose: false,
-                autoCloseDelay: 3
+                }, autoClose: 3,
             })
         }
     }
