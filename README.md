@@ -29,14 +29,14 @@
   ```
   IE 15 及以上浏览器都支持此样式。
 
-2. 安装 gulu
+2. 安装 wheels
   ```
-  npm i --save frank-test-1-1
+  npm i --save wheel-test-1
   ```
-3. 引入 gulu
+3. 引入 wheels
   ```
-  import {Button, ButtonGroup, Icon} from 'frank-test-1-1'
-  import 'frank-test-1-1/dist/index.css'
+  import {Button, ButtonGroup, Icon} from 'wheel-test-1'
+  import 'wheel-test-1/dist/index.css'
   export default {
     name: 'app',
     components: {
