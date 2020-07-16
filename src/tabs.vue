@@ -56,12 +56,6 @@ export default {
     }
   },
   mounted() {
-    this.checkChildren();
     this.selectTab();
   }
 };
-</script>
-<style>
-.tabs {
-}
-</style> 
