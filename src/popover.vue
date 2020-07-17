@@ -4,9 +4,9 @@
       ref="contentWrapper"
       class="content-wrapper"
       v-if="visible"
-      :class="{[`position-${position}`]:true}"
+      :class="{ [`position-${position}`]: true }"
     >
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
@@ -17,9 +17,25 @@
 <script>
 export default {
   name: "GuluPopover",
+  props: {
+    position: {
+      type: String,
+      default: "top",
+      validator(value) {
+        return ["top", "bottom", "left", "right"].indexOf(value) >= 0;
+      },
+    },
+    trigger: {
+      type: String,
+      default: "click",
+      validator(value) {
+        return ["click", "hover"].indexOf(value) >= 0;
+      },
+    },
+  },
   data() {
     return {
-      visible: false
+      visible: false,
     };
   },
   mounted() {
@@ -52,23 +68,7 @@ export default {
       } else {
         return "mouseleave";
       }
-    }
-  },
-  props: {
-    position: {
-      type: String,
-      default: "top",
-      validator(value) {
-        return ["top", "bottom", "left", "right"].indexOf(value) >= 0;
-      }
     },
-    trigger: {
-      type: String,
-      default: "click",
-      validator(value) {
-        return ["click", "hover"].indexOf(value) >= 0;
-      }
-    }
   },
   methods: {
     positionContent() {
@@ -78,23 +78,23 @@ export default {
         width,
         height,
         top,
-        left
+        left,
       } = triggerWrapper.getBoundingClientRect();
       const { height: height2 } = contentWrapper.getBoundingClientRect();
       let positions = {
         top: { top: top + window.scrollY, left: left + window.scrollX },
         bottom: {
           top: top + height + window.scrollY,
-          left: left + window.scrollX
+          left: left + window.scrollX,
         },
         left: {
           top: top + window.scrollY + (height - height2) / 2,
-          left: left + window.scrollX
+          left: left + window.scrollX,
         },
         right: {
           top: top + window.scrollY + (height - height2) / 2,
-          left: left + window.scrollX + width
-        }
+          left: left + window.scrollX + width,
+        },
       };
       contentWrapper.style.left = positions[this.position].left + "px";
       contentWrapper.style.top = positions[this.position].top + "px";
@@ -131,13 +131,12 @@ export default {
       if (this.$refs.triggerWrapper.contains(event.target)) {
         if (this.visible === true) {
           this.close();
-          console.log("click close");
         } else {
           this.open();
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
