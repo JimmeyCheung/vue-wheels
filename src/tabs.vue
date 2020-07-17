@@ -60,3 +60,8 @@ export default {
     this.selectTab();
   }
 };
+</script>
+<style>
+.tabs {
+}
+</style>

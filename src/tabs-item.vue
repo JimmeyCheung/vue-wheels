@@ -14,7 +14,8 @@ export default {
   },
   props: {
     disabled: {
-      type: Boolean
+      type: Boolean,
+      default: false
     },
     name: {
       type: String | Number,
@@ -66,4 +67,4 @@ $disabled-text-color: grey;
     cursor: not-allowed;
   }
 }
-</style> 
+</style>
