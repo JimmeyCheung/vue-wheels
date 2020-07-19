@@ -44,6 +44,7 @@ describe('Tabs', () => {
         })
         vm.$nextTick(() => {
             let x = vm.$el.querySelector(`.tabs-item[data-name="finance"]`)
+            console.log(x.classList)
             expect(x.classList.contains('active')).to.be.true
             done()
         })
@@ -53,4 +54,4 @@ describe('Tabs', () => {
 
     })
 
-}) 
+})
