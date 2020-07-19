@@ -1,4 +1,4 @@
-# vue-wheels 一个 Vue UI 组件
+# jimmey-wheel 一个 Vue UI 组件
 
 作者: JimmeyCheung
 
