@@ -1,48 +1,26 @@
-# jimmey-wheel 一个 Vue UI 组件
+# hello-world
 
-作者: JimmeyCheung
+## Project setup
+```
+yarn install
+```
 
-[![Build Status](https://travis-ci.org/JimmeyCheung/vue-wheels.svg?branch=master)](https://travis-ci.org/JimmeyCheung/vue-wheels)
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
-## 介绍
+### Compiles and minifies for production
+```
+yarn run build
+```
 
-1. 添加 CSS 样式
-  使用本框架前，请在 CSS 中开启 border-box
+### Lints and fixes files
+```
+yarn run lint
+```
 
-  ```
-  *,*::before,*::after{box-sizing: border-box;}
-  ```
-  IE 8 及以上浏览器都支持此样式。
-
-  你还需要设置默认颜色等变量（后续会改为 SCSS 变量）
-  ```
-  html {
-    --button-height: 32px;
-    --font-size: 14px;
-    --button-bg: white;
-    --button-active-bg: #eee;
-    --border-radius: 4px;
-    --color: #333;
-    --border-color: #999;
-    --border-color-hover: #666;
-  }
-  ```
-  IE 15 及以上浏览器都支持此样式。
-
-2. 安装 wheels
-  ```
-  npm i --save wheel-test-1
-  ```
-3. 引入 wheels
-  ```
-  import {Button, ButtonGroup, Icon} from 'wheel-test-1'
-  import 'wheel-test-1/dist/index.css'
-  export default {
-    name: 'app',
-    components: {
-      'g-button': Button,
-      'g-icon': Icon
-    }
-  }
-  ```
-  ## 文档
+### Run your unit tests
+```
+yarn run test:unit
+```
