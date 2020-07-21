@@ -1,7 +1,12 @@
 <template>
   <div>
-    <p>11111</p>
-    <g-cascader :source="source" popover-height="200px"></g-cascader>
+    <p>{{selected}}</p>
+    <g-cascader
+      :source="source"
+      popover-height="200px"
+      :selected.sync="selected"
+      @update:selected="selected = $event"
+    ></g-cascader>
     <p>22222</p>
   </div>
 </template>
@@ -16,6 +21,7 @@ export default {
   },
   data() {
     return {
+      selected: [],
       source: [
         {
           name: "浙江",
