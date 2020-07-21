@@ -13,7 +13,6 @@
         :load-data="loadData"
       ></g-cascader>
     </div>
-    {{source}}
   </div>
 </template>
 <script>
