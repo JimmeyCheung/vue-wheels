@@ -1,6 +1,6 @@
 <template>
-  <div class="cascader">
-    <div class="trigger" @click="popoverVisible = !popoverVisible">{{result || '&nbsp;'}}</div>
+  <div class="cascader" ref="cascader">
+    <div class="trigger" @click="toggle">{{ result || "&nbsp;" }}</div>
     <div class="popover-wrapper" v-if="popoverVisible">
       <cascader-items
         :items="source"
@@ -21,38 +21,63 @@ export default {
   components: { CascaderItems },
   props: {
     source: {
-      type: Array
+      type: Array,
     },
     popoverHeight: {
-      type: String
+      type: String,
     },
     selected: {
       type: Array,
       default: () => {
         return [];
-      }
-    }
+      },
+    },
   },
   loadData: {
-    type: Function
+    type: Function,
   },
   data() {
     return {
-      popoverVisible: false
+      popoverVisible: false,
     };
   },
   updated() {},
   methods: {
+    onClickDocument(e) {
+      let { cascader } = this.$refs;
+      let { target } = e;
+      if (cascader === target || cascader.contains(target)) {
+        return;
+      }
+      this.close();
+    },
+    open() {
+      this.popoverVisible = true;
+      this.$nextTick(() => {
+        document.addEventListener("click", this.onClickDocument);
+      });
+    },
+    close() {
+      this.popoverVisible = false;
+      document.removeEventListener("click", this.onClickDocument);
+    },
+    toggle() {
+      if (this.popoverVisible === true) {
+        this.close();
+      } else {
+        this.open();
+      }
+    },
     onUpdateSelected(newSelected) {
       this.$emit("update:selected", newSelected);
       let lastItem = newSelected[newSelected.length - 1];
       let simplest = (children, id) => {
-        return children.filter(item => item.id === id)[0];
+        return children.filter((item) => item.id === id)[0];
       };
       let complex = (children, id) => {
         let noChildren = [];
         let hasChildren = [];
-        children.forEach(item => {
+        children.forEach((item) => {
           if (item.children) {
             hasChildren.push(item);
           } else {
@@ -77,7 +102,7 @@ export default {
           }
         }
       };
-      let updateSource = result => {
+      let updateSource = (result) => {
         let copy = JSON.parse(JSON.stringify(this.source));
         let toUpdate = complex(copy, lastItem.id);
         toUpdate.children = result;
@@ -87,20 +112,22 @@ export default {
         this.loadData && this.loadData(lastItem, updateSource); // 回调
         // 调回调的时候传一个函数,这个函数理论应该被调用
       }
-    }
+    },
   },
   computed: {
     result() {
-      return this.selected.map(item => item.name).join("/");
-    }
-  }
+      return this.selected.map((item) => item.name).join("/");
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "var";
 .cascader {
+  display: inline-block;
   position: relative;
+  border: 1px solid red;
   .trigger {
     height: $input-height;
     display: inline-flex;
@@ -120,4 +147,4 @@ export default {
     @extend .box-shadow;
   }
 }
-</style> 
+</style>

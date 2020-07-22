@@ -1,8 +1,13 @@
 <template>
-  <div class="cascaderItem" :style="{height: height}">
+  <div class="cascaderItem" :style="{ height: height }">
     <div class="left">
-      <div class="label" v-for="item in items" @click="onClickLabel(item)" :key="item">
-        <span class="name">{{item.name}}</span>
+      <div
+        class="label"
+        v-for="item in items"
+        @click="onClickLabel(item)"
+        :key="item"
+      >
+        <span class="name">{{ item.name }}</span>
         <icon class="icon" v-if="rightArrowVisible(item)" name="right"></icon>
       </div>
     </div>
@@ -11,7 +16,7 @@
         ref="right"
         :items="rightItems"
         :height="height"
-        :level="level+1"
+        :level="level + 1"
         :selected="selected"
         @update:selected="onUpdateSelected"
       ></gulu-cascader-items>
@@ -26,28 +31,28 @@ export default {
   components: { Icon },
   props: {
     items: {
-      type: Array
+      type: Array,
     },
     height: {
-      type: String
+      type: String,
     },
     selected: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     loadData: {
-      type: Function
+      type: Function,
     },
     level: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   computed: {
     rightItems() {
       if (this.selected[this.level]) {
         let selected = this.items.filter(
-          item => item.name === this.selected[this.level].name
+          (item) => item.name === this.selected[this.level].name
         );
         if (
           selected &&
@@ -57,7 +62,7 @@ export default {
           return selected[0].children;
         }
       }
-    }
+    },
   },
   mounted() {},
   methods: {
@@ -72,8 +77,8 @@ export default {
     },
     onUpdateSelected(newSelected) {
       this.$emit("update:selected", newSelected);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -98,6 +103,7 @@ export default {
     display: flex;
     align-items: center;
     cursor: pointer;
+    white-space: nowrap;
     &:hover {
       background: $grey;
     }
@@ -111,4 +117,4 @@ export default {
     }
   }
 }
-</style> 
+</style>
