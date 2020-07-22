@@ -1,9 +1,16 @@
 <template>
-  <div>
+  <div style="padding-top: 16px;">
+    <h2>简单用法</h2>
+    <p>
+      <strong>预览</strong>
+    </p>
     <g-button>默认按钮</g-button>
     <g-button icon="setting">默认按钮</g-button>
     <g-button :loading="true">默认按钮</g-button>
     <g-button disabled>默认按钮</g-button>
+    <p>
+      <strong>代码</strong>
+    </p>
 
     <pre><code>{{content}}</code></pre>
   </div>
@@ -12,7 +19,7 @@
 import Button from "../../../src/button";
 export default {
   components: {
-    "g-button": Button
+    "g-button": Button,
   },
   data() {
     return {
@@ -22,9 +29,9 @@ export default {
           <g-button :loading="true">默认按钮</g-button>
           <g-button disabled>默认按钮</g-button>
       `
-        .replace(/\t+| +/g, "")
-        .trim()
+        .replace(/ {8}/g, "")
+        .trim(),
     };
-  }
+  },
 };
-</script> 
+</script>

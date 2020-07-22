@@ -13,11 +13,17 @@ export default {
   inject: ["eventBus"],
   mounted() {
     this.eventBus.$on("update:selected", (item, vm) => {
-      let { width, height, top, left } = vm.$el.getBoundingClientRect();
-      this.$refs.line.style.width = `${width}px`;
-      this.$refs.line.style.left = `${left}px`;
+      this.updateLinePosition(vm);
     });
-  }
+  },
+  methods: {
+    updateLinePosition(selectedVm) {
+      let { width, left } = selectedVm.$el.getBoundingClientRect();
+      let { left: left2 } = this.$refs.head.getBoundingClientRect();
+      this.$refs.line.style.width = `${width}px`;
+      this.$refs.line.style.left = `${left - left2}px`;
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
@@ -45,4 +51,4 @@ $border-color: #ddd;
     padding: 0 1em;
   }
 }
-</style> 
+</style>
