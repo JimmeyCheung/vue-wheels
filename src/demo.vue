@@ -25,6 +25,7 @@ import Button from "./button";
 import Cascader from "./cascader";
 import db from "./db";
 import Popover from "./popover";
+import { removeListener } from "./click-outside";
 function ajax(parentId = 0) {
   return new Promise((success, fail) => {
     setTimeout(() => {
@@ -51,6 +52,7 @@ export default {
       this.source = result;
     });
   },
+  destroyed() {},
   methods: {
     loadData({ id }, updateSource) {
       ajax(id).then((result) => {
