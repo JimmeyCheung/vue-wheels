@@ -1,5 +1,9 @@
 <template>
-  <button class="g-button" @click="$emit('click')" :class="{ [`icon-${iconPosition}`]: true }">
+  <button
+    class="g-button"
+    @click="$emit('click')"
+    :class="{ [`icon-${iconPosition}`]: true }"
+  >
     <g-icon v-if="!loading && icon" class="icon" :name="icon"></g-icon>
     <g-icon v-if="loading" class="loading icon" name="loading"></g-icon>
     <div class="g-button-content">
@@ -16,28 +20,20 @@ export default {
     icon: {},
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     iconPosition: {
       type: String,
       default: "left",
       validator(value) {
         return value === "left" || value === "right";
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 @import "var";
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .g-button {
   font-size: $font-size;
   height: $button-height;
