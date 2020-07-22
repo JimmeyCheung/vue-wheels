@@ -44,7 +44,10 @@ describe('Col', () => {
         const Constructor = Vue.extend(Col)
         const vm = new Constructor({
             propsData: {
-                pc: { span: 1, offset: 2 }
+                pc: {
+                    span: 1,
+                    offset: 2
+                }
             }
         }).$mount(div)
         const element = vm.$el
@@ -59,7 +62,10 @@ describe('Col', () => {
         const Constructor = Vue.extend(Col)
         const vm = new Constructor({
             propsData: {
-                ipad: { span: 1, offset: 2 }
+                ipad: {
+                    span: 1,
+                    offset: 2
+                }
             }
         }).$mount(div)
         const element = vm.$el
@@ -74,7 +80,10 @@ describe('Col', () => {
         const Constructor = Vue.extend(Col)
         const vm = new Constructor({
             propsData: {
-                narrowPc: { span: 1, offset: 2 }
+                narrowPc: {
+                    span: 1,
+                    offset: 2
+                }
             }
         }).$mount(div)
         const element = vm.$el
@@ -89,7 +98,10 @@ describe('Col', () => {
         const Constructor = Vue.extend(Col)
         const vm = new Constructor({
             propsData: {
-                widePc: { span: 1, offset: 2 }
+                widePc: {
+                    span: 1,
+                    offset: 2
+                }
             }
         }).$mount(div)
         const element = vm.$el
@@ -99,4 +111,4 @@ describe('Col', () => {
         vm.$destroy()
     })
 
-}) 
+})

@@ -43,4 +43,4 @@ describe('TabsItem', () => {
         vm.$el.click()
         expect(callback).to.have.not.been.called
     })
-}) 
+})

@@ -52,4 +52,4 @@ describe('Row', () => {
         vm.$destroy()
     })
 
-}) 
+})

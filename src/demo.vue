@@ -36,7 +36,7 @@ function ajax(parentId = 0) {
         }
       });
       success(result);
-    }, 3000);
+    }, 1000);
   });
 }
 export default {
