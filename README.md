@@ -1,26 +1,16 @@
-# hello-world
+# jimmey-wheel
 
-## Project setup
-```
-yarn install
-```
+[官方文档](https://frankfang.github.io/frank-test-1/)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## 源码学习
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+1. 安装依赖
 
-### Lints and fixes files
-```
-yarn run lint
-```
+   ```
+   yarn install
+   ```
 
-### Run your unit tests
-```
-yarn run test:unit
-```
+2. 启动 dev server
+   ```
+   yarn serve
+   ```
