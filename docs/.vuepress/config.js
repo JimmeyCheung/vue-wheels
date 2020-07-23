@@ -1,6 +1,6 @@
 module.exports = {
     base: '/vue-wheels/',
-    title: 'jimmey-Wheel',
+    title: 'jimmey-wheel',
     description: '一个好用的UI框架',
     themeConfig: {
         nav: [{
