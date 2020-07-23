@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="toastClasses">
+  <div class="gulu-toast" :class="toastClasses">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
@@ -19,35 +19,35 @@ export default {
       default: 5,
       validator(value) {
         return value === false || typeof value === "number";
-      }
+      },
     },
     closeButton: {
       type: Object,
       default() {
         return {
           text: "关闭",
-          callback: undefined
+          callback: undefined,
         };
-      }
+      },
     },
     enableHtml: {
       type: Boolean,
-      default: false
+      default: false,
     },
     position: {
       type: String,
       default: "top",
       validator(value) {
         return ["top", "bottom", "middle"].indexOf(value) >= 0;
-      }
-    }
+      },
+    },
   },
   computed: {
     toastClasses() {
       return {
-        [`position-${this.position}`]: true
+        [`position-${this.position}`]: true,
       };
-    }
+    },
   },
   created() {},
   mounted() {
@@ -79,8 +79,8 @@ export default {
       if (this.closeButton && typeof this.closeButton.callback === "function") {
         this.closeButton.callback(this); //this === toast实例
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
@@ -115,7 +115,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     opacity: 1;
   }
 }
-.wrapper {
+.gulu-toast {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);

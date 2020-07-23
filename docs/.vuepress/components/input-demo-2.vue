@@ -29,7 +29,7 @@ export default {
             value: {{value}}
           </div>
       `
-        .replace(/ {8}/g, "")
+        .replace(/^ {8}/gm, "")
         .trim(),
     };
   },
