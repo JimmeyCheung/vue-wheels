@@ -1,6 +1,6 @@
 # jimmey-wheel
 
-[官方文档](https://frankfang.github.io/frank-test-1/)
+[官方文档](https://github.com/JimmeyCheung/vue-wheels/)
 
 ## 源码学习
 
