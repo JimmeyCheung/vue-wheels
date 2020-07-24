@@ -10,6 +10,7 @@
         v-for="n in childrenLength"
         :class="{active: selectedIndex === n-1}"
         @click="select(n-1)"
+        :key="n"
       >{{n-1}}</span>
     </div>
   </div>
