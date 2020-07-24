@@ -4,7 +4,6 @@
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
     @touchstart="onTouchStart"
-    @touchmove="onTouchMove"
     @touchend="onTouchEnd"
   >
     <div class="g-slides-window" ref="window">
@@ -13,7 +12,7 @@
       </div>
     </div>
     <div class="g-slides-dots">
-      <span @click="onClickPrev">
+      <span @click="onClickPrev" data-action="prev">
         <g-icon name="left"></g-icon>
       </span>
       <span
@@ -21,8 +20,9 @@
         :class="{active: selectedIndex === n-1}"
         @click="select(n-1)"
         :key="n"
+        :data-index="n-1"
       >{{n}}</span>
-      <span @click="onClickNext">
+      <span @click="onClickNext" data-action="next">
         <g-icon name="right"></g-icon>
       </span>
     </div>
@@ -40,6 +40,10 @@ export default {
     autoPlay: {
       type: Boolean,
       default: true
+    },
+    autoPlayDelay: {
+      type: Number,
+      default: 3000
     }
   },
   data() {
@@ -52,11 +56,16 @@ export default {
   },
   mounted() {
     this.updateChildren();
-    this.playAutomatically();
+    if (this.autoPlay) {
+      this.playAutomatically();
+    }
     this.childrenLength = this.items.length;
   },
   updated() {
     this.updateChildren();
+  },
+  beforeDestroy() {
+    this.pause();
   },
   computed: {
     selectedIndex() {
@@ -84,7 +93,6 @@ export default {
       }
       this.startTouch = e.touches[0];
     },
-    onTouchMove() {},
     onTouchEnd(e) {
       let endTouch = e.changedTouches[0];
       let { clientX: x1, clientY: y1 } = this.startTouch;
@@ -117,9 +125,9 @@ export default {
         let index = this.names.indexOf(this.getSelected());
         let newIndex = index + 1;
         this.select(newIndex); // 告诉外界选中 newIndex
-        this.timerId = setTimeout(run, 3000);
+        this.timerId = setTimeout(run, this.autoPlayDelay);
       };
-      this.timerId = setTimeout(run, 3000);
+      this.timerId = setTimeout(run, this.autoPlayDelay);
     },
     pause() {
       window.clearTimeout(this.timerId);
