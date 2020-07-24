@@ -11,10 +11,10 @@ export default {
   name: "GuluSider",
   data() {
     return {
-      visible: true
+      visible: true,
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
