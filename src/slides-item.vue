@@ -11,22 +11,20 @@ export default {
   props: {
     name: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
       selected: undefined,
-      reverse: false,
+      reverse: false
     };
   },
   computed: {
     visible() {
-      console.log(`我的name是${this.name}`);
-      console.log(`我的方向是${this.reverse ? "反向" : "正向"}`);
       return this.selected === this.name;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -42,7 +40,7 @@ export default {
 }
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 3s;
+  transition: all 0.5s;
 }
 .slide-enter {
   transform: translateX(100%);
