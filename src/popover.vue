@@ -4,7 +4,7 @@
       ref="contentWrapper"
       class="content-wrapper"
       v-if="visible"
-      :class="{ [`position-${position}`]: true }"
+      :class="{[`position-${position}`]:true}"
     >
       <slot name="content" :close="close"></slot>
     </div>
