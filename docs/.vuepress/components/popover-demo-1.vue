@@ -33,7 +33,7 @@
 <style scoped>
 </style>
 <script>
-import GButton from "../../../src/button";
+import GButton from "../../../src/button/button";
 import GPopover from "../../../src/popover";
 export default {
   components: { GButton, GPopover },
@@ -66,15 +66,15 @@ export default {
           </g-popover>
       `
         .replace(/^ {8}/gm, "")
-        .trim(),
+        .trim()
     };
   },
   methods: {
     onClickButton() {
       this.$toast('<strong style="color:red;">加粗的提示</strong>', {
-        enableHtml: true,
+        enableHtml: true
       });
-    },
-  },
+    }
+  }
 };
 </script> 

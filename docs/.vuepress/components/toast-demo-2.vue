@@ -27,7 +27,7 @@
 </style>
 <script>
 import plugin from "../../../src/plugin";
-import GButton from "../../../src/button";
+import GButton from "../../../src/button/button";
 import Vue from "vue";
 Vue.use(plugin);
 export default {
@@ -57,7 +57,7 @@ export default {
           },
       `
         .replace(/^ {8}/gm, "")
-        .trim(),
+        .trim()
     };
   },
   methods: {
@@ -67,10 +67,10 @@ export default {
           text: "知道了",
           callback: () => {
             console.log("他说知道了");
-          },
-        },
+          }
+        }
       });
-    },
-  },
+    }
+  }
 };
 </script> 

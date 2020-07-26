@@ -1,9 +1,5 @@
 <template>
-  <button
-    class="g-button"
-    @click="$emit('click')"
-    :class="{ [`icon-${iconPosition}`]: true }"
-  >
+  <button class="g-button" @click="$emit('click')" :class="{ [`icon-${iconPosition}`]: true }">
     <g-icon v-if="!loading && icon" class="icon" :name="icon"></g-icon>
     <g-icon v-if="loading" class="loading icon" name="loading"></g-icon>
     <div class="g-button-content">
@@ -12,7 +8,7 @@
   </button>
 </template>
 <script>
-import icon from "./icon";
+import icon from "../icon";
 export default {
   name: "GuluButton",
   components: { "g-icon": icon },
@@ -20,20 +16,20 @@ export default {
     icon: {},
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     iconPosition: {
       type: String,
       default: "left",
       validator(value) {
         return value === "left" || value === "right";
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
-@import "var";
+@import "../var"; // webpack 配置 scss 根目录
 .g-button {
   font-size: $font-size;
   height: $button-height;

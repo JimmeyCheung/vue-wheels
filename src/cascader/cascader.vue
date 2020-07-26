@@ -1,8 +1,6 @@
 <template>
   <div class="cascader" ref="cascader" v-click-outside="close">
-    <div class="trigger" @click="toggle">
-      {{ result || "&nbsp;" }}
-    </div>
+    <div class="trigger" @click="toggle">{{ result || "&nbsp;" }}</div>
     <div class="popover-wrapper" v-if="popoverVisible">
       <cascader-items
         :items="source"
@@ -19,32 +17,32 @@
 
 <script>
 import CascaderItems from "./cascader-items";
-import ClickOutside from "./click-outside";
+import ClickOutside from "../click-outside";
 export default {
   name: "GuluCascader",
   components: { CascaderItems },
   directives: { ClickOutside },
   props: {
     source: {
-      type: Array,
+      type: Array
     },
     popoverHeight: {
-      type: String,
+      type: String
     },
     selected: {
       type: Array,
       default: () => {
         return [];
-      },
+      }
     },
     loadData: {
-      type: Function,
-    },
+      type: Function
+    }
   },
   data() {
     return {
       popoverVisible: false,
-      loadingItem: {},
+      loadingItem: {}
     };
   },
   updated() {},
@@ -66,12 +64,12 @@ export default {
       this.$emit("update:selected", newSelected);
       let lastItem = newSelected[newSelected.length - 1];
       let simplest = (children, id) => {
-        return children.filter((item) => item.id === id)[0];
+        return children.filter(item => item.id === id)[0];
       };
       let complex = (children, id) => {
         let noChildren = [];
         let hasChildren = [];
-        children.forEach((item) => {
+        children.forEach(item => {
           if (item.children) {
             hasChildren.push(item);
           } else {
@@ -96,7 +94,7 @@ export default {
           }
         }
       };
-      let updateSource = (result) => {
+      let updateSource = result => {
         this.loadingItem = {};
         let copy = JSON.parse(JSON.stringify(this.source));
         let toUpdate = complex(copy, lastItem.id);
@@ -108,13 +106,13 @@ export default {
         // 调回调的时候传一个函数,这个函数理论应该被调用
         this.loadingItem = lastItem;
       }
-    },
+    }
   },
   computed: {
     result() {
-      return this.selected.map((item) => item.name).join("/");
-    },
-  },
+      return this.selected.map(item => item.name).join("/");
+    }
+  }
 };
 </script>
 

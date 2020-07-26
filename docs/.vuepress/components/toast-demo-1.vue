@@ -29,7 +29,7 @@
 </style>
 <script>
 import plugin from "../../../src/plugin";
-import GButton from "../../../src/button";
+import GButton from "../../../src/button/button";
 import Vue from "vue";
 Vue.use(plugin);
 export default {
@@ -47,8 +47,8 @@ export default {
           <g-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</g-button>
       `
         .replace(/^ {8}/gm, "")
-        .trim(),
+        .trim()
     };
-  },
+  }
 };
 </script> 

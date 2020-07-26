@@ -108,8 +108,8 @@
 }
 </style>
 <script>
-import GRow from "../../../src/row";
-import GCol from "../../../src/col";
+import GRow from "../../../src/grid/row";
+import GCol from "../../../src/grid/col";
 export default {
   components: { GRow, GCol },
   data() {
@@ -203,8 +203,8 @@ export default {
           </g-row>
       `
         .replace(/^ {8}/gm, "")
-        .trim(),
+        .trim()
     };
-  },
+  }
 };
 </script>

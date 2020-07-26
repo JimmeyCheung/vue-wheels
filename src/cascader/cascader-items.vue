@@ -8,11 +8,7 @@
             <icon class="loading" name="loading"></icon>
           </template>
           <template v-else>
-            <icon
-              class="next"
-              v-if="rightArrowVisible(item)"
-              name="right"
-            ></icon>
+            <icon class="next" v-if="rightArrowVisible(item)" name="right"></icon>
           </template>
         </span>
       </div>
@@ -33,38 +29,38 @@
 </template>
 
 <script>
-import Icon from "./icon";
+import Icon from "../icon";
 export default {
   name: "GuluCascaderItems",
   components: { Icon },
   props: {
     items: {
-      type: Array,
+      type: Array
     },
     height: {
-      type: String,
+      type: String
     },
     loadingItem: {
       type: Object,
-      default: () => ({}),
+      default: () => ({})
     },
     selected: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     loadData: {
-      type: Function,
+      type: Function
     },
     level: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
   computed: {
     rightItems() {
       if (this.selected[this.level]) {
         let selected = this.items.filter(
-          (item) => item.name === this.selected[this.level].name
+          item => item.name === this.selected[this.level].name
         );
         if (
           selected &&
@@ -74,7 +70,7 @@ export default {
           return selected[0].children;
         }
       }
-    },
+    }
   },
   mounted() {},
   methods: {
@@ -89,8 +85,8 @@ export default {
     },
     onUpdateSelected(newSelected) {
       this.$emit("update:selected", newSelected);
-    },
-  },
+    }
+  }
 };
 </script>
 
