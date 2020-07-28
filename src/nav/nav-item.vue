@@ -1,6 +1,5 @@
-
 <template>
-  <div class="g-nav-item" :class="{selected}" @click="onClick">
+  <div class="g-nav-item" :class="{ selected }" @click="onClick">
     <slot></slot>
   </div>
 </template>
@@ -25,6 +24,8 @@ export default {
   },
   methods: {
     onClick() {
+      this.root.namePath = [];
+      this.$parent.updateNamePath && this.$parent.updateNamePath();
       this.$emit("add:selected", this.name);
     },
   },
@@ -51,9 +52,10 @@ export default {
 .g-sub-nav .g-nav-item {
   &.selected {
     color: $color;
+    background: $grey;
     &::after {
       display: none;
     }
   }
 }
-</style> 
+</style>
