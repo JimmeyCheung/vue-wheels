@@ -6,7 +6,9 @@
         <div v-else v-html="$slots.default[0]"></div>
       </div>
       <div class="line" ref="line"></div>
-      <span class="close" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
+      <span class="close" v-if="closeButton" @click="onClickClose">{{
+        closeButton.text
+      }}</span>
     </div>
   </div>
 </template>
@@ -161,6 +163,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   .close {
     padding-left: 16px;
     flex-shrink: 0;
+    cursor: pointer;
   }
   .line {
     height: 100%;
