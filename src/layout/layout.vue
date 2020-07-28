@@ -9,17 +9,17 @@ export default {
   data() {
     return {
       layoutClass: {
-        hasSider: false
-      }
+        hasSider: false,
+      },
     };
   },
   mounted() {
-    this.$children.forEach(vm => {
+    this.$children.forEach((vm) => {
       if (vm.$options.name === "GuluSider") {
         this.layoutClass.hasSider = true;
       }
     });
-  }
+  },
 };
 </script>
 
