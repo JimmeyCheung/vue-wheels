@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
     base: '/vue-wheels/',
     title: 'jimmey-wheel',
@@ -40,5 +41,8 @@ module.exports = {
             }
 
         ]
+    },
+    scss: {
+        includePaths: [path.join(__dirname, '../../styles')]
     }
 }
