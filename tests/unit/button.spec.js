@@ -7,7 +7,7 @@ import {
     shallowMount,
     mount
 } from '@vue/test-utils'
-import Button from '@/button/button'
+import Button from '../../src/button/button'
 chai.use(sinonChai)
 
 describe('Button.vue', () => {
@@ -38,6 +38,7 @@ describe('Button.vue', () => {
 
     it('icon 默认的 order 是 1', () => {
         const wrapper = mount(Button, {
+            attachToDocument: true,
             propsData: {
                 icon: 'settings',
             }
