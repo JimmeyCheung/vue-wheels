@@ -21,14 +21,14 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       selected: undefined,
       reverse: false,
-      animationEnabled: false
+      animationEnabled: false,
     };
   },
   updated() {
@@ -37,8 +37,8 @@ export default {
   computed: {
     visible() {
       return this.selected === this.name;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -68,4 +68,4 @@ export default {
 .slide-leave-to.reverse {
   transform: translateX(100%);
 }
-</style> 
+</style>

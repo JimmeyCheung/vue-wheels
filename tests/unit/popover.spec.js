@@ -1,5 +1,4 @@
 import chai, { expect } from 'chai'
-import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 import { shallowMount, mount } from '@vue/test-utils'
 import Popover from '../../src/popover'
@@ -22,9 +21,11 @@ describe('Popover', () => {
                 position: 'bottom'
             }
         })
-        wrapper.find('button').trigger('click')
-        let classes = wrapper.find('.content-wrapper').classes()
-        expect(classes).to.include('position-bottom')
+        setTimeout(() => {
+            wrapper.find('button').trigger('click')
+            let classes = wrapper.find('.content-wrapper').classes()
+            expect(classes).to.include('position-bottom')
+        }, 21)
     })
     it('可以设置 trigger', () => {
         const wrapper = mount(Popover, {
@@ -38,8 +39,10 @@ describe('Popover', () => {
             }
         })
         expect(wrapper.find('.content-wrapper').element).to.not.exist
-        wrapper.find('.popover').trigger('mouseenter')
-        expect(wrapper.find('.content-wrapper').element).to.exist
+        setTimeout(() => {
+            wrapper.find('.popover').trigger('mouseenter')
+            expect(wrapper.find('.content-wrapper').element).to.exist
+        }, 21)
 
     })
 

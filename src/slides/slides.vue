@@ -18,9 +18,9 @@
       <span
         v-for="n in childrenLength"
         :class="{active: selectedIndex === n-1}"
-        @click="select(n-1)"
         :key="n"
         :data-index="n-1"
+        @click="select(n-1)"
       >{{n}}</span>
       <span @click="onClickNext" data-action="next">
         <g-icon name="right"></g-icon>
@@ -35,23 +35,23 @@ export default {
   components: { GIcon },
   props: {
     selected: {
-      type: String
+      type: String,
     },
     autoPlay: {
       type: Boolean,
-      default: true
+      default: true,
     },
     autoPlayDelay: {
       type: Number,
-      default: 3000
-    }
+      default: 3000,
+    },
   },
   data() {
     return {
       childrenLength: 0,
       lastSelectedIndex: undefined,
       timerId: undefined,
-      startTouch: undefined
+      startTouch: undefined,
     };
   },
   mounted() {
@@ -73,11 +73,13 @@ export default {
       return index === -1 ? 0 : index;
     },
     names() {
-      return this.items.map(vm => vm.name);
+      return this.items.map((vm) => vm.name);
     },
     items() {
-      return this.$children.filter(vm => vm.$options.name === "GuluSlidesItem");
-    }
+      return this.$children.filter(
+        (vm) => vm.$options.name === "GuluSlidesItem"
+      );
+    },
   },
   methods: {
     onMouseEnter() {
@@ -149,7 +151,7 @@ export default {
     },
     updateChildren() {
       let selected = this.getSelected();
-      this.items.forEach(vm => {
+      this.items.forEach((vm) => {
         let reverse =
           this.selectedIndex > this.lastSelectedIndex ? false : true;
         if (this.timerId) {
@@ -171,8 +173,8 @@ export default {
           vm.selected = selected;
         });
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -212,4 +214,4 @@ export default {
     }
   }
 }
-</style> 
+</style>

@@ -23,19 +23,19 @@ export default {
       default: "top",
       validator(value) {
         return ["top", "bottom", "left", "right"].indexOf(value) >= 0;
-      }
+      },
     },
     trigger: {
       type: String,
       default: "click",
       validator(value) {
         return ["click", "hover"].indexOf(value) >= 0;
-      }
-    }
+      },
+    },
   },
   data() {
     return {
-      visible: false
+      visible: false,
     };
   },
   mounted() {
@@ -68,7 +68,7 @@ export default {
       } else {
         return "mouseleave";
       }
-    }
+    },
   },
   methods: {
     positionContent() {
@@ -78,23 +78,23 @@ export default {
         width,
         height,
         top,
-        left
+        left,
       } = triggerWrapper.getBoundingClientRect();
       const { height: height2 } = contentWrapper.getBoundingClientRect();
       let positions = {
         top: { top: top + window.scrollY, left: left + window.scrollX },
         bottom: {
           top: top + height + window.scrollY,
-          left: left + window.scrollX
+          left: left + window.scrollX,
         },
         left: {
           top: top + window.scrollY + (height - height2) / 2,
-          left: left + window.scrollX
+          left: left + window.scrollX,
         },
         right: {
           top: top + window.scrollY + (height - height2) / 2,
-          left: left + window.scrollX + width
-        }
+          left: left + window.scrollX + width,
+        },
       };
       contentWrapper.style.left = positions[this.position].left + "px";
       contentWrapper.style.top = positions[this.position].top + "px";
@@ -135,8 +135,8 @@ export default {
           this.open();
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
