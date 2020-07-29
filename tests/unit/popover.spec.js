@@ -1,6 +1,9 @@
 import chai, { expect } from 'chai'
 import sinonChai from 'sinon-chai'
-import { shallowMount, mount } from '@vue/test-utils'
+import {
+    shallowMount,
+    mount
+} from '@vue/test-utils'
 import Popover from '../../src/popover'
 
 chai.use(sinonChai)
@@ -14,7 +17,9 @@ describe('Popover', () => {
     it('可以设置position.', () => {
         const wrapper = mount(Popover, {
             slots: {
-                default: { template: `<button>点我</button>` },
+                default: {
+                    template: `<button>点我</button>`
+                },
                 content: '<div>弹出内容</div>'
             },
             propsData: {
@@ -30,7 +35,9 @@ describe('Popover', () => {
     it('可以设置 trigger', () => {
         const wrapper = mount(Popover, {
             slots: {
-                default: { template: `<button>点我</button>` },
+                default: {
+                    template: `<button>点我</button>`
+                },
                 content: '<div>弹出内容</div>'
             },
             propsData: {

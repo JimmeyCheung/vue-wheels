@@ -1,15 +1,18 @@
 {
     "name": "jimmey-wheel",
-    "version": "0.1.0",
+    "version": "0.0.1",
+    "main": "dist/gulu.umd.min.js",
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
+        "build": "vue-cli-service build --target lib --name gulu src/index.js",
         "test": "karma start --single-run",
-        "test:unit": "vue-cli-service test:unit",
+        "test:unit": "karma start",
+        "test:unit:old": "vue-cli-service test:unit",
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs"
     },
     "dependencies": {
+        "node-sass": "^4.14.1",
         "vue": "^2.5.17"
     },
     "devDependencies": {
@@ -25,7 +28,6 @@
         "karma-spec-reporter": "^0.0.32",
         "karma-webpack": "^3.0.0",
         "mocha": "^5.2.0",
-        "node-sass": "^4.9.0",
         "sass-loader": "^7.0.1",
         "sinon": "^6.1.5",
         "sinon-chai": "^3.2.0",
