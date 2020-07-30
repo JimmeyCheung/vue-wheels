@@ -1,4 +1,4 @@
-# jimmey-wheel
+# jimmey-wheel UI
 
 [官方文档](https://github.com/JimmeyCheung/vue-wheels/)
 
