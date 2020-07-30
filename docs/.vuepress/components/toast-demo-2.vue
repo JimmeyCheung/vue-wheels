@@ -35,29 +35,29 @@ export default {
   data() {
     return {
       content: `
-          <style>
+        <style>
             .gulu-toast {
               z-index: 30;
             }
-          </style>
-          <div>
+        </style>
+        <div>
             <g-button @click="onClickButton">上方弹出</g-button>
-          </div>
-          methods: {
+        </div>
+        methods: {
             onClickButton () {
-              this.$toast('你知道我在等你吗？', {
-                closeButton: {
-                  text: '知道了',
-                  callback: () => {
-                    console.log('他说知道了')
-                  }
-                }
-              })
+                this.$toast('你知道我在等你吗？', {
+                    closeButton: {
+                        text: '知道了',
+                        callback: () => {
+                            console.log('他说知道了')
+                        }
+                    }
+                })
             }
-          },
+        },
       `
         .replace(/^ {8}/gm, "")
-        .trim()
+        .trim(),
     };
   },
   methods: {
@@ -67,10 +67,10 @@ export default {
           text: "知道了",
           callback: () => {
             console.log("他说知道了");
-          }
-        }
+          },
+        },
       });
-    }
-  }
+    },
+  },
 };
 </script> 

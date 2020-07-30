@@ -13,6 +13,7 @@ title: 快速上手
 ```javascript
 import { Button } from "jimmey-wheel";
 import Vue from "vue";
+import "jimmey-wheel/dist/wheel.css";
 
 new Vue({
   el: "#app",

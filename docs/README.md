@@ -4,7 +4,7 @@
 
 jimmey-wheel UI 是一个面向学习造轮子的 UI 框架，详细的 commit 记录了我学习造轮子过程中的思路。
 
-它是一个「面向源码阅读者」的框架。如果对你有帮助，请不要吝惜你的 star。
+它是一个「面向源码阅读者」的框架。如果对你有帮助，希望可以 star。
 
 如果你对代码有疑问，欢迎[提 issue](https://github.com/JimmeyCheung/vue-wheels/issues)，我会回答你的疑问。
 
@@ -21,7 +21,7 @@ jimmey-wheel UI 是一个面向学习造轮子的 UI 框架，详细的 commit �
 ## 项目特点
 
 1. 使用 Travis CI 进行持续集成
-2. 有丰富的单元测试，项目完成时，期望测试覆盖率超过 90%
+2. 有丰富的单元测试
 3. 自说明的代码，即使没有注释，你也能看懂
 4. 初期我使用 parcel 构建方便上手，后期改为 Vue Cli 3 以实现更多功能
 
@@ -37,16 +37,3 @@ jimmey-wheel UI 是一个面向学习造轮子的 UI 框架，详细的 commit �
 
 本 UI 框架借鉴了一些成熟 UI 框架（如 Element UI 和 Ant Design）的外观。
 如果你发现有什么不足的地方，请提出你宝贵的建议。
-
-## 源码学习
-
-1. 安装依赖
-
-   ```
-   yarn install
-   ```
-
-2. 启动 dev server
-   ```
-   yarn serve
-   ```

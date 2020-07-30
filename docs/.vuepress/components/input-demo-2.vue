@@ -21,13 +21,13 @@ export default {
     return {
       value: "1",
       content: `
-          data:{
+        data:{
             value: '1'
-          }
-          <g-input v-model="value"></g-input>
-          <div>
+        }
+        <g-input v-model="value"></g-input>
+        <div>
             value: {{value}}
-          </div>
+        </div>
       `
         .replace(/^ {8}/gm, "")
         .trim(),

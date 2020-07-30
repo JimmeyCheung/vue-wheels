@@ -4,11 +4,12 @@
     <p>
       <strong>预览</strong>
     </p>
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">默认按钮</g-button>
-    <g-button :loading="true">默认按钮</g-button>
-    <g-button disabled>默认按钮</g-button>
-
+    <div class="button-group">
+      <g-button>默认按钮</g-button>
+      <g-button icon="settings">默认按钮</g-button>
+      <g-button :loading="true">默认按钮</g-button>
+      <g-button disabled>默认按钮</g-button>
+    </div>
     <p>
       <strong>代码</strong>
     </p>
@@ -24,10 +25,10 @@ export default {
   data() {
     return {
       content: `
-          <g-button>默认按钮</g-button>
-          <g-button icon="settings">默认按钮</g-button>
-          <g-button :loading="true">默认按钮</g-button>
-          <g-button disabled>默认按钮</g-button>
+        <g-button>默认按钮</g-button>
+        <g-button icon="settings">默认按钮</g-button>
+        <g-button :loading="true">默认按钮</g-button>
+        <g-button disabled>默认按钮</g-button>
       `
         .replace(/^ {8}/gm, "")
         .trim(),
@@ -35,3 +36,9 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.button-group {
+  display: flex;
+  align-items: center;
+}
+</style>

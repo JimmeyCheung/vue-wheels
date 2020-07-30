@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       content: `
-          <g-layout style="color: white; margin-bottom:50px;">
+        <g-layout style="color: white; margin-bottom:50px;">
             <g-header style="height: 50px; background:lightskyblue;">
               header
             </g-header>
@@ -43,11 +43,11 @@ export default {
             <g-footer style="height: 50px; background:lightskyblue;">
               footer
             </g-footer>
-          </g-layout>
+        </g-layout>
       `
         .replace(/^ {8}/gm, "")
-        .trim()
+        .trim(),
     };
-  }
+  },
 };
 </script> 
