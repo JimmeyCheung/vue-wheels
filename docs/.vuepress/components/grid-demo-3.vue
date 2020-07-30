@@ -146,8 +146,8 @@ export default {
           </g-row>
       `
         .replace(/^ {8}/gm, "")
-        .trim()
+        .trim(),
     };
-  }
+  },
 };
-</script> 
+</script>

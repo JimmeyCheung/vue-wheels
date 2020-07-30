@@ -27,7 +27,6 @@ import GTabsBody from "../../../src/tabs/tabs-body";
 import GTabsHead from "../../../src/tabs/tabs-head";
 import GTabsItem from "../../../src/tabs/tabs-item";
 import GTabsPane from "../../../src/tabs/tabs-pane";
-
 export default {
   components: { GTabs, GTabsBody, GTabsHead, GTabsItem, GTabsPane },
   data() {
@@ -49,8 +48,8 @@ export default {
           </g-tabs>
       `
         .replace(/^ {8}/gm, "")
-        .trim()
+        .trim(),
     };
-  }
+  },
 };
 </script>

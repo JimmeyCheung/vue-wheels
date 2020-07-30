@@ -1,11 +1,9 @@
 ---
-title: Grid
+title: Button
 ---
 
-# 网格
+# 按钮
 
-<ClientOnly>
-    <grid-demo-1></grid-demo-1>
-    <grid-demo-2></grid-demo-2>
-    <grid-demo-3></grid-demo-3>
+<ClientOnly> 
+  <grid-demo-1></grid-demo-1>
 </ClientOnly>

@@ -105,6 +105,9 @@
   height: 50px;
   border: 1px solid #ccc;
   background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 <script>
@@ -203,8 +206,8 @@ export default {
           </g-row>
       `
         .replace(/^ {8}/gm, "")
-        .trim()
+        .trim(),
     };
-  }
+  },
 };
 </script>

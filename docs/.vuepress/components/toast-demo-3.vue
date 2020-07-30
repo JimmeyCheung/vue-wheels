@@ -27,7 +27,7 @@
 </style>
 <script>
 import plugin from "../../../src/plugin";
-import GButton from "../../../src/button/bubtton";
+import GButton from "../../../src/button/button";
 import Vue from "vue";
 Vue.use(plugin);
 export default {
@@ -57,15 +57,15 @@ export default {
           },
       `
         .replace(/^ {8}/gm, "")
-        .trim()
+        .trim(),
     };
   },
   methods: {
     onClickButton() {
       this.$toast('<strong style="color:red;">加粗的提示</strong>', {
-        enableHtml: true
+        enableHtml: true,
       });
-    }
-  }
+    },
+  },
 };
 </script> 
