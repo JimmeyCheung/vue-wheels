@@ -1,14 +1,18 @@
 <template>
   <transition name="slide">
-    <div class="sider" v-if="visible">
+    <div class="sider" v-if="visible" @click="visible=false">
       <slot></slot>
-      <button @click="visible=false">close</button>
+      <div class="icon-wrap">
+        <g-icon class="icon" name="shrink"></g-icon>
+      </div>
     </div>
   </transition>
 </template>
 <script>
+import icon from "../icon";
 export default {
   name: "GuluSider",
+  components: { "g-icon": icon },
   data() {
     return {
       visible: true,
@@ -21,10 +25,20 @@ export default {
 <style lang="scss" scoped>
 .sider {
   position: relative;
-  > button {
+  > .icon-wrap {
+    display: inline-block;
     position: absolute;
-    top: 0;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    > .icon {
+      transition: all 0.5;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.4);
+      }
+    }
   }
 }
 .slide-enter-active,

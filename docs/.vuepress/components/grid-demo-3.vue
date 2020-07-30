@@ -64,7 +64,8 @@
     <pre><code>{{content}}</code></pre>
   </div>
 </template>
-<style scoped>
+<style scoped lang="scss">
+@import "var";
 * {
   box-sizing: border-box;
 }
@@ -74,7 +75,7 @@
 .demoCol {
   height: 50px;
   border: 1px solid #ccc;
-  background: #eee;
+  background: $skin-color;
   display: flex;
   justify-content: center;
   align-items: center;

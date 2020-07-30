@@ -6,9 +6,9 @@
     </p>
 
     <g-layout style="color: white; margin-bottom:50px;">
-      <g-header style="height: 50px; background:lightskyblue;">header</g-header>
-      <g-content style="height: 100px; background:deepskyblue;">content</g-content>
-      <g-footer style="height: 50px; background:lightskyblue;">footer</g-footer>
+      <g-header style="height: 50px; background:#5adda2;">header</g-header>
+      <g-content style="height: 100px; background:#41b883;">content</g-content>
+      <g-footer style="height: 50px; background:#5adda2;">footer</g-footer>
     </g-layout>
 
     <p>
@@ -34,13 +34,13 @@ export default {
     return {
       content: `
         <g-layout style="color: white; margin-bottom:50px;">
-            <g-header style="height: 50px; background:lightskyblue;">
+            <g-header style="height: 50px; background:#5adda2;">
               header
             </g-header>
-            <g-content style="height: 100px; background:deepskyblue;">
+            <g-content style="height: 100px; background:#41b883;">
               content
             </g-content>
-            <g-footer style="height: 50px; background:lightskyblue;">
+            <g-footer style="height: 50px; background:#5adda2;">
               footer
             </g-footer>
         </g-layout>

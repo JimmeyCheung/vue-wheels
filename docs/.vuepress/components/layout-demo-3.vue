@@ -6,11 +6,11 @@
     </p>
 
     <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-      <g-sider style=" background:#ddd; width:200px; color: black;">sider</g-sider>
+      <g-sider style=" background:black; width:200px; color: white;">sider</g-sider>
       <g-layout>
-        <g-header style="height: 50px; background:lightskyblue;">header</g-header>
-        <g-content style="height: 100px; background:deepskyblue;">content</g-content>
-        <g-footer style="height: 50px; background:lightskyblue;">footer</g-footer>
+        <g-header style="height: 50px; background:#5adda2;">header</g-header>
+        <g-content style="height: 100px; background:#41b883;">content</g-content>
+        <g-footer style="height: 50px; background:#5adda2;">footer</g-footer>
       </g-layout>
     </g-layout>
     <p>
@@ -36,17 +36,17 @@ export default {
     return {
       content: `
         <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-            <g-sider style=" background:#ddd; width:200px; color: black;">
+            <g-sider style=" background:black; width:200px; color: white;">
               sider
             </g-sider>
             <g-layout>
-                <g-header style="height: 50px; background:lightskyblue;">
+                <g-header style="height: 50px; background:#5adda2;">
                     header
                 </g-header>
-                <g-content style="height: 100px; background:deepskyblue;">
+                <g-content style="height: 100px; background:#41b883;">
                     content
                 </g-content>
-                <g-footer style="height: 50px; background:lightskyblue;">
+                <g-footer style="height: 50px; background:#5adda2;">
                     footer
                 </g-footer>
             </g-layout>

@@ -201,6 +201,7 @@ export default {
       border-radius: 50%;
       margin: 0 8px;
       font-size: 12px;
+      user-select: none;
       &:hover {
         cursor: pointer;
       }

@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" ref="head">
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="actions-wrapper">
@@ -27,8 +27,9 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@import "var";
 $tab-height: 40px;
-$blue: blue;
+$blue: #0e9ef2;
 $border-color: #ddd;
 .tabs-head {
   display: flex;
@@ -39,8 +40,7 @@ $border-color: #ddd;
   > .line {
     position: absolute;
     bottom: 0;
-    border-bottom: 1px solid $blue;
-    width: 100px;
+    border-bottom: 2px solid $skin-color;
     transition: all 350ms;
   }
   > .actions-wrapper {

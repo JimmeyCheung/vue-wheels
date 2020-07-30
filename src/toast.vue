@@ -6,9 +6,11 @@
         <div v-else v-html="$slots.default[0]"></div>
       </div>
       <div class="line" ref="line"></div>
-      <span class="close" v-if="closeButton" @click="onClickClose">{{
+      <span class="close" v-if="closeButton" @click="onClickClose">
+        {{
         closeButton.text
-      }}</span>
+        }}
+      </span>
     </div>
   </div>
 </template>
@@ -86,9 +88,10 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@import "var";
 $font-size: 14px;
 $toast-min-height: 40px;
-$toast-bg: rgba(0, 0, 0, 0.75);
+$toast-bg: $skin-color;
 @keyframes slide-up {
   0% {
     opacity: 0;

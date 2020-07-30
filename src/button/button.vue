@@ -16,16 +16,16 @@ export default {
     icon: {},
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     iconPosition: {
       type: String,
       default: "left",
       validator(value) {
         return value === "left" || value === "right";
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -49,6 +49,10 @@ export default {
   }
   &:focus {
     outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $button-bg;
   }
   > .g-button-content {
     order: 2;

@@ -51,8 +51,8 @@ export default {
         <style lang="scss" scoped>
             .box{
                 height: 300px;
-                background: blue;
                 color: white;
+                background-color: $skin-color;
                 font-size: 30px;
                 display: flex;
                 justify-content: center;
@@ -70,7 +70,7 @@ export default {
 @import "var";
 .box {
   height: 300px;
-  background: $blue;
+  background-color: $skin-color;
   color: white;
   font-size: 30px;
   display: flex;

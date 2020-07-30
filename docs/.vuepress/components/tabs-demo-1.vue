@@ -10,8 +10,8 @@
         <g-tabs-item name="2">2</g-tabs-item>
       </g-tabs-head>
       <g-tabs-body>
-        <g-tabs-pane name="1">content 1</g-tabs-pane>
-        <g-tabs-pane name="2">content 2</g-tabs-pane>
+        <g-tabs-pane name="1">tabContent 1</g-tabs-pane>
+        <g-tabs-pane name="2">tabContent 2</g-tabs-pane>
       </g-tabs-body>
     </g-tabs>
 
