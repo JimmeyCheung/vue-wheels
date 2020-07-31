@@ -91,7 +91,7 @@ export default {
 @import "var";
 $font-size: 14px;
 $toast-min-height: 40px;
-$toast-bg: $skin-color;
+$toast-bg: black;
 @keyframes slide-up {
   0% {
     opacity: 0;

@@ -1,14 +1,14 @@
 <template>
   <div style="padding-top: 16px;">
-    <h2>简单用法</h2>
+    <h2>简单示例</h2>
     <p>
       <strong>预览</strong>
     </p>
     <div class="button-group">
-      <g-button>默认按钮</g-button>
-      <g-button icon="setting">默认按钮</g-button>
-      <g-button :loading="true">默认按钮</g-button>
-      <g-button disabled>默认按钮</g-button>
+      <j-button>默认按钮</j-button>
+      <j-button icon="setting">设置按钮</j-button>
+      <j-button :loading="true">加载按钮</j-button>
+      <j-button disabled>禁用按钮</j-button>
     </div>
     <p>
       <strong>代码</strong>
@@ -17,18 +17,18 @@
   </div>
 </template>
 <script>
-import Button from "../../../src/button/button";
+import JButton from "../../../src/button/button";
 export default {
   components: {
-    "g-button": Button,
+    "j-button": JButton,
   },
   data() {
     return {
       content: `
-        <g-button>默认按钮</g-button>
-        <g-button icon="setting">默认按钮</g-button>
-        <g-button :loading="true">默认按钮</g-button>
-        <g-button disabled>默认按钮</g-button>
+        <j-button>默认按钮</j-button>
+        <j-button icon="setting">设置按钮</j-button>
+        <j-button :loading="true">加载按钮</j-button>
+        <j-button disabled>禁用按钮</j-button>
       `
         .replace(/^ {8}/gm, "")
         .trim(),

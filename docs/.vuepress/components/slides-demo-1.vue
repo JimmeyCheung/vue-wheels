@@ -1,20 +1,20 @@
 <template>
   <div style="padding-top: 16px;">
-    <h2>简单用法</h2>
+    <h2>简单示例</h2>
     <p>
       <strong>预览</strong>
     </p>
-    <g-slides :selected.sync="selected">
-      <g-slides-item name="1">
+    <j-slides :selected.sync="selected">
+      <j-slides-item name="1">
         <div class="box">1</div>
-      </g-slides-item>
-      <g-slides-item name="2">
+      </j-slides-item>
+      <j-slides-item name="2">
         <div class="box">2</div>
-      </g-slides-item>
-      <g-slides-item name="3">
+      </j-slides-item>
+      <j-slides-item name="3">
         <div class="box">3</div>
-      </g-slides-item>
-    </g-slides>
+      </j-slides-item>
+    </j-slides>
 
     <p>
       <strong>代码</strong>
@@ -23,28 +23,28 @@
   </div>
 </template>
 <script>
-import GSlides from "../../../src/slides/slides";
-import GSlidesItem from "../../../src/slides/slides-item";
+import JSlides from "../../../src/slides/slides";
+import JSlidesItem from "../../../src/slides/slides-item";
 export default {
   components: {
-    GSlides,
-    GSlidesItem,
+    JSlides,
+    JSlidesItem,
   },
   data() {
     return {
       selected: "1",
       content: `
-        <g-slides :selected.sync="selected">
-            <g-slides-item name="1">
+        <j-slides :selected.sync="selected">
+            <j-slides-item name="1">
                 <div class="box">1</div>
-            </g-slides-item>
-            <g-slides-item name="2">
+            </j-slides-item>
+            <j-slides-item name="2">
                 <div class="box">2</div>
-            </g-slides-item>
-            <g-slides-item name="3">
+            </j-slides-item>
+            <j-slides-item name="3">
                 <div class="box">3</div>
-            </g-slides-item>
-        </g-slides>
+            </j-slides-item>
+        </j-slides>
         data: {
             selected: '1'
         }

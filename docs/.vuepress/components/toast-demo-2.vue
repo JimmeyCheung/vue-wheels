@@ -6,7 +6,7 @@
     </p>
 
     <div>
-      <g-button @click="onClickButton">上方弹出</g-button>
+      <j-button @click="onClickButton">上方弹出</j-button>
     </div>
 
     <p>
@@ -27,11 +27,11 @@
 </style>
 <script>
 import plugin from "../../../src/plugin";
-import GButton from "../../../src/button/button";
+import JButton from "../../../src/button/button";
 import Vue from "vue";
 Vue.use(plugin);
 export default {
-  components: { GButton },
+  components: { JButton },
   data() {
     return {
       content: `
@@ -41,7 +41,7 @@ export default {
             }
         </style>
         <div>
-            <g-button @click="onClickButton">上方弹出</g-button>
+             <j-button @click="onClickButton">上方弹出 </j-button>
         </div>
         methods: {
             onClickButton () {

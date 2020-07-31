@@ -4,7 +4,7 @@
     <p>
       <strong>预览</strong>
     </p>
-    <g-input v-model="value"></g-input>
+    <j-input v-model="value"></j-input>
     <div>value: {{ value }}</div>
 
     <p>
@@ -14,17 +14,17 @@
   </div>
 </template>
 <script>
-import GInput from "../../../src/input";
+import JInput from "../../../src/input";
 export default {
-  components: { GInput },
+  components: { JInput },
   data() {
     return {
-      value: "1",
+      value: "输入框内容",
       content: `
         data:{
-            value: '1'
+            value: '输入框内容'
         }
-        <g-input v-model="value"></g-input>
+        <j-input v-model="value"></j-input>
         <div>
             value: {{value}}
         </div>

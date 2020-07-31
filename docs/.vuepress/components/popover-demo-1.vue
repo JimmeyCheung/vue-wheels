@@ -5,22 +5,22 @@
       <strong>预览</strong>
     </p>
 
-    <g-popover>
-      <g-button>上方弹出</g-button>
+    <j-popover>
+      <j-button>上方弹出</j-button>
       <template slot="content">弹出内容</template>
-    </g-popover>
-    <g-popover position="bottom">
-      <g-button>下方弹出</g-button>
+    </j-popover>
+    <j-popover position="bottom">
+      <j-button>下方弹出</j-button>
       <template slot="content">弹出内容</template>
-    </g-popover>
-    <g-popover position="left">
-      <g-button>左边弹出</g-button>
+    </j-popover>
+    <j-popover position="left">
+      <j-button>左边弹出</j-button>
       <template slot="content">弹出内容</template>
-    </g-popover>
-    <g-popover position="right">
-      <g-button>右边弹出</g-button>
+    </j-popover>
+    <j-popover position="right">
+      <j-button>右边弹出</j-button>
       <template slot="content">弹出内容</template>
-    </g-popover>
+    </j-popover>
 
     <p>
       <strong>代码</strong>
@@ -33,37 +33,37 @@
 <style scoped>
 </style>
 <script>
-import GButton from "../../../src/button/button";
-import GPopover from "../../../src/popover";
+import JButton from "../../../src/button/button";
+import JPopover from "../../../src/popover";
 export default {
-  components: { GButton, GPopover },
+  components: { JButton, JPopover },
   data() {
     return {
       content: `
-        <g-popover>
-            <g-button>上方弹出</g-button>
+        <j-popover>
+            <j-button>上方弹出</j-button>
             <template slot="content">
               弹出内容
             </template>
-        </g-popover>
-        <g-popover position="bottom">
-            <g-button>下方弹出</g-button>
+        </j-popover>
+        <j-popover position="bottom">
+            <j-button>下方弹出</j-button>
             <template slot="content">
               弹出内容
             </template>
-        </g-popover>
-        <g-popover position="left">
-            <g-button>左边弹出</g-button>
+        </j-popover>
+        <j-popover position="left">
+            <j-button>左边弹出</j-button>
             <template slot="content">
               弹出内容
             </template>
-        </g-popover>
-        <g-popover position="right">
-            <g-button>右边弹出</g-button>
+        </j-popover>
+        <j-popover position="right">
+            <j-button>右边弹出</j-button>
             <template slot="content">
               弹出内容
             </template>
-        </g-popover>
+        </j-popover>
       `
         .replace(/^ {8}/gm, "")
         .trim(),

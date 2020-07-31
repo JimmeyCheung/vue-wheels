@@ -8,7 +8,7 @@ title: 快速上手
 
 请参考 [安装](../install/) 章节
 
-## Hello World
+## 全局导入组件和样式
 
 ```javascript
 import { Button } from "jimmey-wheel";
@@ -18,7 +18,7 @@ import "jimmey-wheel/dist/wheel.css";
 new Vue({
   el: "#app",
   components: {
-    "g-button": Button,
+    "j-button": Button,
   },
 });
 ```

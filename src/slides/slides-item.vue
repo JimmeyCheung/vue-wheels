@@ -51,10 +51,10 @@ export default {
   height: 100%;
 }
 .slide-enter-active {
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .slide-leave-active {
-  transition: all 0.5s;
+  transition: all 0.6s;
 }
 .slide-enter,
 .slide-enter.reverse {

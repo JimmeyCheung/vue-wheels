@@ -27,23 +27,23 @@ export default {
   name: "GuluInput",
   props: {
     value: {
-      type: String
+      type: String,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     error: {
-      type: String
+      type: String,
     },
     info: {
-      type: String
-    }
-  }
+      type: String,
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -57,15 +57,15 @@ export default {
   }
   > input {
     height: 32px;
-    border: 1px solid $border-color;
+    border: 1px solid $skin-color;
     border-radius: 4px;
     padding: 0 8px;
     font-size: inherit;
     &:hover {
-      border-color: $border-color-hover;
+      border-color: $skin-color;
     }
     &:focus {
-      box-shadow: inset 0 1px 3px $box-shadow-color;
+      box-shadow: inset 0 1px 3px $skin-color;
       outline: none;
     }
     &[disabled],

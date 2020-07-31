@@ -36,7 +36,7 @@ export default {
   padding: 0 1em;
   border-radius: $border-radius;
   border: 1px solid $border-color;
-  background: $button-bg;
+  background: $skin-color;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ export default {
     border-color: $border-color-hover;
   }
   &:active {
-    background-color: $button-active-bg;
+    background-color: darken($skin-color, 10%);
   }
   &:focus {
     outline: none;

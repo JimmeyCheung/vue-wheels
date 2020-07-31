@@ -1,18 +1,18 @@
 <template>
   <div style="padding-top: 16px;">
-    <h2>布局</h2>
+    <h2>内部侧边栏布局</h2>
     <p>
       <strong>预览</strong>
     </p>
 
-    <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-      <g-header style="height: 50px; background:#5adda2;">header</g-header>
-      <g-layout>
-        <g-sider style="height: 100px; background:black; width:200px; color: white;">sider</g-sider>
-        <g-content style="height: 100px; background:#41b883;">content</g-content>
-      </g-layout>
-      <g-footer style="height: 50px; background:#5adda2;">footer</g-footer>
-    </g-layout>
+    <j-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+      <j-header style="height: 50px; background:#5adda2;">header</j-header>
+      <j-layout>
+        <j-sider style="height: 100px; background:black; width:200px; color: white;">sider</j-sider>
+        <j-content style="height: 100px; background:#41b883;">content</j-content>
+      </j-layout>
+      <j-footer style="height: 50px; background:#5adda2;">footer</j-footer>
+    </j-layout>
 
     <p>
       <strong>代码</strong>
@@ -26,32 +26,32 @@
 }
 </style>
 <script>
-import GLayout from "../../../src/layout/layout";
-import GHeader from "../../../src/layout/header";
-import GFooter from "../../../src/layout/footer";
-import GContent from "../../../src/layout/content";
-import GSider from "../../../src/layout/sider";
+import JLayout from "../../../src/layout/layout";
+import JHeader from "../../../src/layout/header";
+import JFooter from "../../../src/layout/footer";
+import JContent from "../../../src/layout/content";
+import JSider from "../../../src/layout/sider";
 export default {
-  components: { GLayout, GHeader, GFooter, GContent, GSider },
+  components: { JLayout, JHeader, JFooter, JContent, JSider },
   data() {
     return {
       content: `
-        <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-            <g-header style="height: 50px; background:#5adda2;">
+        <j-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+            <j-header style="height: 50px; background:#5adda2;">
                 header
-            </g-header>
-            <g-layout>
-                <g-sider style="height: 100px; background:black; width:200px; color: black;">
+            </j-header>
+            <j-layout>
+                <j-sider style="height: 100px; background:black; width:200px; color: black;">
                     sider
-                </g-sider>
-                <g-content style="height: 100px; background:#41b883;">
+                </j-sider>
+                <j-content style="height: 100px; background:#41b883;">
                     content
-                </g-content>
-            </g-layout>
-            <g-footer style="height: 50px; background:#5adda2;">
+                </j-content>
+            </j-layout>
+            <j-footer style="height: 50px; background:#5adda2;">
                 footer
-            </g-footer>
-        </g-layout>
+            </j-footer>
+        </j-layout>
       `
         .replace(/^ {8}/gm, "")
         .trim(),

@@ -1,12 +1,12 @@
 <template>
   <div style="padding-top: 16px;">
-    <h2>简单用法</h2>
+    <h2>简单示例</h2>
     <p>
       <strong>预览</strong>
     </p>
-    <g-input value="中文"></g-input>
-    <g-input value="中文" disabled></g-input>
-    <g-input value="中文" readonly></g-input>
+    <j-input value="默认"></j-input>
+    <j-input value="禁用" disabled></j-input>
+    <j-input value="只读" readonly></j-input>
 
     <p>
       <strong>代码</strong>
@@ -15,17 +15,17 @@
   </div>
 </template>
 <script>
-import GInput from "../../../src/input";
+import JInput from "../../../src/input";
 export default {
-  components: { GInput },
+  components: { JInput },
   data() {
     return {
       selected: "1",
       content: `
-        <g-input></g-input>
-        <g-input value="中文"></g-input>
-        <g-input value="中文" disabled></g-input>
-        <g-input value="中文" readonly></g-input>
+        <j-input></j-input>
+        <j-input value="默认"></j-input>
+        <j-input value="禁用" disabled></j-input>
+        <j-input value="只读" readonly></j-input>
       `
         .replace(/^ {8}/gm, "")
         .trim(),

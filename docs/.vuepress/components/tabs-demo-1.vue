@@ -1,19 +1,19 @@
 <template>
   <div style="padding-top: 16px;">
-    <h2>简单用法</h2>
+    <h2>简单示例</h2>
     <p>
       <strong>预览</strong>
     </p>
-    <g-tabs :selected="selected">
-      <g-tabs-head>
-        <g-tabs-item name="1">1</g-tabs-item>
-        <g-tabs-item name="2">2</g-tabs-item>
-      </g-tabs-head>
-      <g-tabs-body>
-        <g-tabs-pane name="1">tabContent 1</g-tabs-pane>
-        <g-tabs-pane name="2">tabContent 2</g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
+    <j-tabs :selected="selected">
+      <j-tabs-head>
+        <j-tabs-item name="1">1</j-tabs-item>
+        <j-tabs-item name="2">2</j-tabs-item>
+      </j-tabs-head>
+      <j-tabs-body>
+        <j-tabs-pane name="1">tabContent 1</j-tabs-pane>
+        <j-tabs-pane name="2">tabContent 2</j-tabs-pane>
+      </j-tabs-body>
+    </j-tabs>
 
     <p>
       <strong>代码</strong>
@@ -22,13 +22,13 @@
   </div>
 </template>
 <script>
-import GTabs from "../../../src/tabs/tabs";
-import GTabsBody from "../../../src/tabs/tabs-body";
-import GTabsHead from "../../../src/tabs/tabs-head";
-import GTabsItem from "../../../src/tabs/tabs-item";
-import GTabsPane from "../../../src/tabs/tabs-pane";
+import JTabs from "../../../src/tabs/tabs";
+import JTabsBody from "../../../src/tabs/tabs-body";
+import JTabsHead from "../../../src/tabs/tabs-head";
+import JTabsItem from "../../../src/tabs/tabs-item";
+import JTabsPane from "../../../src/tabs/tabs-pane";
 export default {
-  components: { GTabs, GTabsBody, GTabsHead, GTabsItem, GTabsPane },
+  components: { JTabs, JTabsBody, JTabsHead, JTabsItem, JTabsPane },
   data() {
     return {
       selected: "1",
@@ -36,16 +36,16 @@ export default {
         data:{
             selected: '1'
         }
-        <g-tabs :selected="selected">
-            <g-tabs-head>
-                <g-tabs-item name="1">1</g-tabs-item>
-                <g-tabs-item name="2">2</g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-                <g-tabs-pane name="1">content 1</g-tabs-pane>
-                <g-tabs-pane name="2">content 2</g-tabs-pane>
-            </g-tabs-body>
-        </g-tabs>
+        <j-tabs :selected="selected">
+            <j-tabs-head>
+                <j-tabs-item name="1">1</j-tabs-item>
+                <j-tabs-item name="2">2</j-tabs-item>
+            </j-tabs-head>
+            <j-tabs-body>
+                <j-tabs-pane name="1">content 1</j-tabs-pane>
+                <j-tabs-pane name="2">content 2</j-tabs-pane>
+            </j-tabs-body>
+        </j-tabs>
       `
         .replace(/^ {8}/gm, "")
         .trim(),
