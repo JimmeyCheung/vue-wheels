@@ -19,7 +19,10 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
+# 如果发布到 https://<USERNAME>.gitee/<REPO>
+git push -f git@gitee.com:JimmeyCheung/vue-wheels.git master
+
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:jimmeycheung/vue-wheels.git master:gh-pages
+# git push -f git@github.com:jimmeycheung/vue-wheels.git master:gh-pages
 
 cd -
