@@ -1,8 +1,8 @@
-# jimmey-wheel UI
+# Jimmey Wheel UI
 
 [官方文档](https://github.com/JimmeyCheung/vue-wheels/)
 
-jimmey-wheel UI 是一个面向学习造轮子的 UI 框架，详细的 commit 记录了我学习造轮子过程中的思路。
+Jimmey Wheel UI 是一个面向学习造轮子的 UI 框架，详细的 commit 记录了我学习造轮子过程中的思路。
 
 它是一个「面向源码阅读者」的框架。如果对你有帮助，希望可以 star。
 
