@@ -1,4 +1,9 @@
+
 # Jimmey Wheel UI
+
+作者: JimmeyCheung
+
+[![Build Status](https://travis-ci.org/JimmeyCheung/vue-wheels.svg?branch=master)](https://travis-ci.org/JimmeyCheung/vue-wheels)
 
 [官方文档](https://github.com/JimmeyCheung/vue-wheels/)
 
