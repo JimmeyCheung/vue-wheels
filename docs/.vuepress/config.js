@@ -2,7 +2,7 @@ const path = require("path");
 module.exports = {
     base: "/vue-wheels/",
     title: "吉米 UI",
-    description: "一个好用的Vue UI框架",
+    description: "一个让你爱不释手的 Vue UI 框架",
     themeConfig: {
         nav: [{
                 text: "主页",

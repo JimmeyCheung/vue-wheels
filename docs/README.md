@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: 吉米 UI
-tagline: 一个让你爱不释手的Vue UI框架
+tagline: 一个让你爱不释手的 Vue UI 框架
 actionText: 快速上手 →
 actionLink: /introduction/
 features:
