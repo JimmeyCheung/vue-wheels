@@ -4,10 +4,10 @@
   </div>
 </template>
 <script>
-let validator = value => {
+let validator = (value) => {
   let keys = Object.keys(value);
   let valid = true;
-  keys.forEach(key => {
+  keys.forEach((key) => {
     if (!["span", "offset"].includes(key)) {
       valid = false;
     }
@@ -18,19 +18,19 @@ export default {
   name: "GuluCol",
   props: {
     span: {
-      type: [Number, String]
+      type: [Number, String],
     },
     offset: {
-      type: [Number, String]
+      type: [Number, String],
     },
     ipad: { type: Object, validator },
     narrowPc: { type: Object, validator },
     pc: { type: Object, validator },
-    widePc: { type: Object, validator }
+    widePc: { type: Object, validator },
   },
   data() {
     return {
-      gutter: 0
+      gutter: 0,
     };
   },
   methods: {
@@ -46,7 +46,7 @@ export default {
         array.push(`offset-${str}${obj.offset}`);
       }
       return array;
-    }
+    },
   },
   computed: {
     colClass() {
@@ -57,16 +57,16 @@ export default {
         ...createClasses(ipad, "ipad-"),
         ...createClasses(narrowPc, "narrow-pc-"),
         ...createClasses(pc, "pc-"),
-        ...createClasses(widePc, "wide-pc-")
+        ...createClasses(widePc, "wide-pc-"),
       ];
     },
     colStyle() {
       return {
         paddingLeft: this.gutter / 2 + "px",
-        paddingRight: this.gutter / 2 + "px"
+        paddingRight: this.gutter / 2 + "px",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
