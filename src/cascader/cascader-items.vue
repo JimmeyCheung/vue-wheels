@@ -1,7 +1,7 @@
 <template>
   <div class="cascaderItem" :style="{ height: height }">
     <div class="left">
-      <div class="label" v-for="item in items" @click="onClickLabel(item)">
+      <div class="label" v-for="item in items" :key="item.name" @click="onClickLabel(item)">
         <span class="name">{{ item.name }}</span>
         <span class="icons">
           <template v-if="item.name === loadingItem.name">
@@ -35,32 +35,32 @@ export default {
   components: { Icon },
   props: {
     items: {
-      type: Array
+      type: Array,
     },
     height: {
-      type: String
+      type: String,
     },
     loadingItem: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     selected: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     loadData: {
-      type: Function
+      type: Function,
     },
     level: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   computed: {
     rightItems() {
       if (this.selected[this.level]) {
         let selected = this.items.filter(
-          item => item.name === this.selected[this.level].name
+          (item) => item.name === this.selected[this.level].name
         );
         if (
           selected &&
@@ -70,7 +70,7 @@ export default {
           return selected[0].children;
         }
       }
-    }
+    },
   },
   mounted() {},
   methods: {
@@ -85,8 +85,8 @@ export default {
     },
     onUpdateSelected(newSelected) {
       this.$emit("update:selected", newSelected);
-    }
-  }
+    },
+  },
 };
 </script>
 

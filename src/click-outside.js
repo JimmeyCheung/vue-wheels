@@ -1,3 +1,4 @@
+let callbacks = []
 let onClickDocument = (e) => {
     let {
         target
@@ -11,7 +12,12 @@ let onClickDocument = (e) => {
     })
 }
 document.addEventListener('click', onClickDocument)
-let callbacks = []
+
+
+let removeListener = () => {
+    document.removeEventListener('click', onClickDocument)
+}
+
 export default {
     bind: function (el, binding, vnode) {
         callbacks.push({
@@ -20,11 +26,6 @@ export default {
         })
     }
 }
-
-let removeListener = () => {
-    document.removeEventListener('click', onClickDocument)
-}
-
 export {
     removeListener
 }
